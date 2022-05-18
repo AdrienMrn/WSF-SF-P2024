@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ movie.name }}{% endblock %}
+
+{% block body %}
+    <h1>{{ movie.name }}</h1>
+
+    <table>
+        <tr>
+            <th>Nom</th>
+            <th>Prix</th>
+        </tr>
+
+            <tr>
+                <td>{{ movie.name }}</td>
+                <td>{{ movie.price }}</td>
+            </tr>
+    </table>
+{% endblock %}
