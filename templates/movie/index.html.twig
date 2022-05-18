@@ -16,7 +16,9 @@
             <tr>
                 <td>{{ movie.name }}</td>
                 <td>{{ movie.price }}</td>
-                <td><a href="{{ path('movie_show', {'id': movie.id}) }}">Voir</a></td>
+                <td><a href="{{ path('movie_show', {'name': movie.name}) }}">Voir</a></td>
+                <td><a href="{{ path('movie_update', {'name': movie.name}) }}">Modifier</a></td>
+                <td><a href="{{ path('movie_delete', {'name': movie.name, 'token': csrf_token('delete'~movie.id)}) }}">Supprimer</a></td>
             </tr>
         {% endfor %}
     </table>
